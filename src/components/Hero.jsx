@@ -10,17 +10,17 @@ export default function Hero() {
             <div className="grow-1 content-center">
               <hr />
             </div>
-            <div className="grow-12">Hakan Reşit YALÇIN</div>
+            <p className="grow-12">Hakan Reşit YALÇIN</p>
           </div>
           <div>
             <p className="font-sans font-bold text-7xl text-gray-800">
               Creative thinker Minimalism lover
             </p>
-            <p className="font-sans font-normal text-lg text-gray-500">
+            <h1 className="font-sans font-normal text-lg text-gray-500">
               Hi, I’m Almila. I’m a full-stack developer. If you are looking for
               a Developer who to craft solid and scalable frontend products with
               great user experiences. Let’s shake hands with me.
-            </p>
+            </h1>
           </div>
           <div className="flex gap-3">
             <button className="border rounded-md border-indigo-800 px-8 py-3 text-white bg-indigo-800">
