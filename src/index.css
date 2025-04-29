@@ -5,8 +5,11 @@
   --font-sans: "Inter", "sans-serif";
 }
 
-#root {
-  padding: 2rem 12rem;
+html {
+  display: flex;
+  padding: 2rem 30rem;
+  align-items: center;
+  align-content: center;
 }
 
 .navbar {
