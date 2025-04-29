@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Header from "./components/Header.jsx";
 import Skills from "./components/Skills.jsx";
 import Profile from "./components/Profile.jsx";
+import Projects from "./components/Projects.jsx";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Skills />
         <Profile />
+        <Projects />
       </div>
     </>
   );
