@@ -4,12 +4,13 @@
   --font-*: initial;
   --font-sans: "Inter", "sans-serif";
 }
-
 html {
-  display: flex;
-  padding: 2rem 28rem;
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center;
-  align-content: center;
+}
+body {
+  max-width: 1440px;
 }
 
 .navbar {
