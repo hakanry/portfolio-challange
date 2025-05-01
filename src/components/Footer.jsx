@@ -7,10 +7,18 @@ function Footer() {
         Let’s work together on your next product.
       </h1>
       <nav className="flex justify-around max-sm:flex-col max-sm: gap-4">
-        <a className="grow-30  text-rose-800 underline font-bold " href="#">
+        <a
+          className="grow-30 text-rose-800 underline font-bold "
+          href={
+            "https://mail.google.com/mail/?view=cm&to=`${hakanryalcin@gmail.com}`"
+          }
+        >
           👉 hakanryalcin@gmail.com
         </a>
-        <a className="grow-1 text-gray-950" href="/">
+        <a
+          className="grow-1 text-gray-950"
+          href="https://portfolio-challange-ten.vercel.app/"
+        >
           Personal Blog
         </a>
         <a
