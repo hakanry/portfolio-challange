@@ -24,7 +24,7 @@ function Skills() {
         Skills
       </h1>
 
-      <div className="flex  justify-between py-4">
+      <div className="flex  justify-between py-4 max-sm:flex-col">
         {skillData.map((s, index) => {
           return <SkillCard key={index} skill={s} />;
         })}

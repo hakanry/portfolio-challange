@@ -2,13 +2,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="flex gap-22 flex-col p-12">
+    <div className="flex gap-22 flex-col p-12 ">
       <h1 className="text-[42px] font-semibold max-w-md text-gray-800">
         Let’s work together on your next product.
       </h1>
-      <nav className="flex justify-around">
+      <nav className="flex justify-around max-sm:flex-col max-sm: gap-4">
         <a className="grow-30  text-rose-800 underline font-bold " href="#">
-          👉 hakanresityalcin@gmail.com
+          👉 hakanryalcin@gmail.com
         </a>
         <a className="grow-1 text-gray-950" href="/">
           Personal Blog
