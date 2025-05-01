@@ -7,10 +7,24 @@ function Footer() {
         Let’s work together on your next product.
       </h1>
       <nav className="flex justify-around">
-        <a className="grow-30">hakanresityalcin@gmail.com</a>
-        <a className="grow-1">Personal Blog</a>
-        <a className="grow-1">Github</a>
-        <a className="grow-1">LinkedIn</a>
+        <a className="grow-30  text-rose-800 underline font-bold " href="#">
+          👉 hakanresityalcin@gmail.com
+        </a>
+        <a className="grow-1 text-gray-950" href="/">
+          Personal Blog
+        </a>
+        <a
+          className="grow-1 text-emerald-500"
+          href="https://github.com/hakanry"
+        >
+          Github
+        </a>
+        <a
+          className="grow-1 text-sky-600"
+          href="https://www.linkedin.com/in/hakan-re%C5%9Fit-yal%C3%A7%C4%B1n-5207b4243/"
+        >
+          LinkedIn
+        </a>
       </nav>
     </div>
   );

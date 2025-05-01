@@ -34,11 +34,11 @@ const projectData = [
 ];
 function Projects() {
   return (
-    <section className="py-4">
+    <section className="py-8" id="projects">
       <h1 className="font-sans font-bold text-5xl text-gray-800 py-4">
         Projects
       </h1>
-      <div className="flex gap-30">
+      <div className="flex gap-30 py-4">
         {projectData.map((p, index) => {
           return <ProjectCard key={index} project={p} />;
         })}
