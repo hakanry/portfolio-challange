@@ -5,13 +5,15 @@ function ProjectCard(p) {
   return (
     <div className="flex flex-col gap-6 py-4">
       <img src={project.imgSRC} />
-      <h1 className="text-indigo-700 text-3xl">{project.title}</h1>
+      <h1 className="text-indigo-700 text-3xl dark:text-indigo-400">
+        {project.title}
+      </h1>
       <p className="text-gray-500 text-sm">{project.paragraph}</p>
       <div className="flex gap-1.5">
         {project.icerir.map((x, index) => {
           return (
             <p
-              className="border-1 border-indigo-700 rounded-sm text-indigo-700 py-1.5 px-4.5 font-bold"
+              className="border-1 border-indigo-700 rounded-sm text-indigo-700 py-1.5 px-4.5 font-bold dark:border-indigo-400 dark:text-indigo-400"
               key={index}
             >
               {x}
@@ -19,7 +21,7 @@ function ProjectCard(p) {
           );
         })}
       </div>
-      <nav className="flex justify-between text-indigo-800 underline font-bold ">
+      <nav className="flex justify-between text-indigo-800 underline font-bold dark:text-indigo-400">
         <a href={project.github}>Github</a>
         <a href={project.projectURL}>View Site</a>
       </nav>

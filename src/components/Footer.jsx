@@ -3,12 +3,12 @@ import React from "react";
 function Footer() {
   return (
     <div className="flex gap-22 flex-col p-12 ">
-      <h1 className="text-[42px] font-semibold max-w-md text-gray-800">
+      <h1 className="text-[42px] font-semibold max-w-md text-gray-800 dark:text-slate-300">
         Let’s work together on your next product.
       </h1>
       <nav className="flex justify-around max-sm:flex-col max-sm: gap-4">
         <a
-          className="grow-30 text-rose-800 underline font-bold "
+          className="grow-30 text-rose-800 underline font-bold dark:text-violet-300"
           href={
             "https://mail.google.com/mail/?view=cm&to=`${hakanryalcin@gmail.com}`"
           }
@@ -16,7 +16,7 @@ function Footer() {
           👉 hakanryalcin@gmail.com
         </a>
         <a
-          className="grow-1 text-gray-950"
+          className="grow-1 text-gray-950 dark:text-violet-100"
           href="https://portfolio-challange-ten.vercel.app/"
         >
           Personal Blog

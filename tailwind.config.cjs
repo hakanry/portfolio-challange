@@ -1,11 +1,11 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      screens: { xs: { max: "320px" } },
+      screens: {
+        xs: { max: "320px" },
+      },
     },
   },
   plugins: [],

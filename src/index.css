@@ -1,11 +1,15 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --font-*: initial;
   --font-sans: "Inter", "sans-serif";
 }
-body {
-  width: 80%;
-  margin: 0 auto;
+html {
+  @apply bg-white;
+}
+
+html.dark {
+  @apply bg-zinc-800;
 }

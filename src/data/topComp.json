@@ -1,0 +1,18 @@
+{
+  "topComp": {
+    "languageSwitch": {
+      "tr": "TÜRKÇE'YE GEÇ",
+      "en": "Switch to TURKISH"
+    }
+  },
+  "themeToggle": {
+    "darkMode": {
+      "tr": "KARANLIK MOD",
+      "en": "DARK MODE"
+    },
+    "lightMode": {
+      "tr": "AÇIK MOD",
+      "en": "LIGHT MODE"
+    }
+  }
+}

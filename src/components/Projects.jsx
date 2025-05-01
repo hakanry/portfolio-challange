@@ -7,7 +7,7 @@ function Projects() {
   const projectData = useSelector((store) => store.projectReducer);
   return (
     <section className="py-8" id="projects">
-      <h1 className="font-sans font-bold text-5xl text-gray-800 py-4">
+      <h1 className="font-sans font-bold text-5xl text-gray-800 py-4 dark:text-slate-300">
         Projects
       </h1>
       <div className="flex flex-col gap-32 py-4  xl:flex-row">

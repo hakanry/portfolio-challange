@@ -6,10 +6,11 @@ import Skills from "./components/Skills.jsx";
 import Profile from "./components/Profile.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
+
 function App() {
   return (
     <>
-      <div>
+      <div className="w-[80%] m-auto">
         <TopComp />
         <Header />
         <Hero />
