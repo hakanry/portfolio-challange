@@ -1,7 +1,9 @@
 import img_1 from "../assets/img_1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { useLanguage } from "../contexts/LanguageContext";
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <>
       <div className="flex justify-between py-8 flex-col  xl:flex-row">
@@ -14,19 +16,17 @@ export default function Hero() {
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-sans font-bold text-7xl text-gray-800 max-sm:text-4xl dark:text-slate-300 ">
-              Creative thinker Minimalism lover
+              {t("tagline")}
             </p>
             <h1 className="font-sans font-normal text-lg text-gray-500  max-sm:max-w-[100%] dark:text-white">
-              Hi, I’m Hakan Reşit. I’m a full-stack developer. If you are
-              looking for a Developer who to craft solid and scalable frontend
-              products with great user experiences. Let’s shake hands with me.
+              {t("intro")}
             </h1>
           </div>
           <div className="flex gap-3 max-sm:flex-col ">
             <a href="#">
               {" "}
               <button className="cursor-pointer border rounded-md border-indigo-800 px-8 py-3 text-white bg-indigo-800 max-sm:w-full dark:bg-violet-100 dark:text-black dark:border-violet-100">
-                Hire me
+                {t("hire_me")}
               </button>
             </a>
             <a href="https://github.com/hakanry">
@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
         </div>
         <img
-          className="max-w-[30%] md:max-w-full md:p-12 sm:max-w-full sm:p-12 max-sm:max-w-full max-sm:py-6"
+          className="w-[30%] aspect-2/1.5 rounded-full md:max-w-full md:p-12 sm:max-w-full sm:p-12 max-sm:max-w-full max-sm:py-6"
           src={img_1}
         />
       </div>

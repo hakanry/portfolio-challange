@@ -1,10 +1,11 @@
 import React from "react";
-
+import { useLanguage } from "../contexts/LanguageContext";
 function Footer() {
+  const { t } = useLanguage();
   return (
     <div className="flex gap-22 flex-col p-12 ">
       <h1 className="text-[42px] font-semibold max-w-md text-gray-800 dark:text-slate-300">
-        Let’s work together on your next product.
+        {t("lets_work")}
       </h1>
       <nav className="flex justify-around max-sm:flex-col max-sm: gap-4">
         <a
@@ -19,7 +20,7 @@ function Footer() {
           className="grow-1 text-gray-950 dark:text-violet-100"
           href="https://portfolio-challange-ten.vercel.app/"
         >
-          Personal Blog
+          {t("blog")}
         </a>
         <a
           className="grow-1 text-emerald-500"

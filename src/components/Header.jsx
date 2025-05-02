@@ -1,6 +1,7 @@
 import { toast, ToastContainer } from "react-toastify";
-
+import { useLanguage } from "../contexts/LanguageContext";
 export default function Header() {
+  const { t } = useLanguage();
   return (
     <>
       <div className="flex justify-between py-4 max-w-full max-sm:flex-col max-sm:text-center">
@@ -14,22 +15,22 @@ export default function Header() {
             <a
               className="content-center px-8 py-3"
               href="#skills"
-              onClick={() => toast.success("Going to Skills")}
+              onClick={() => toast.success(t("going_to_skills"))}
             >
-              Skills
+              {t("skills")}
             </a>
             <a
               className="content-center px-8 py-3"
               href="#projects"
-              onClick={() => toast.success("Going to Projects")}
+              onClick={() => toast.success(t("going_to_projects"))}
             >
-              Projects
+              {t("projects")}
             </a>
             <a
               href="#"
               className="border rounded-md border-indigo-800 px-8 py-3 dark:bg-white dark:text-indigo-800 dark:border-indigo-800"
             >
-              Hire me
+              {t("hire_me")}
             </a>
           </nav>
           <ToastContainer />

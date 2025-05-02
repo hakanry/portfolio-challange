@@ -1,5 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
+import { useLanguage } from "../contexts/LanguageContext";
 const skillData = [
   {
     title: "JavaScript",
@@ -18,10 +19,11 @@ const skillData = [
   },
 ];
 function Skills() {
+  const { t } = useLanguage();
   return (
     <section className="py-8" id="skills">
       <h1 className="font-sans font-bold text-5xl text-gray-800 py-4 dark:text-slate-300 ">
-        Skills
+        {t("skills")}
       </h1>
 
       <div className="flex  justify-between py-4 max-sm:flex-col">

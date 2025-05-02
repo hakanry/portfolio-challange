@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function ThemeToggle() {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
-
+  const { t } = useLanguage();
   useEffect(() => {
     const root = window.document.documentElement;
     if (darkMode) {
@@ -25,7 +26,7 @@ export default function ThemeToggle() {
         />
         <div className="relative w-9 h-5 bg-indigo-700     rounded-full peer dark:bg-neutral-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full  after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-yellow-300  after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-indigo-600 dark:peer-checked:bg-neutral-700"></div>
         <span className="ms-3  font-medium text-gray-900 dark:text-neutral-500">
-          {darkMode === true ? "LIGHT MODE" : "DARK MODE"}
+          {darkMode === true ? t("light_mode") : t("dark_mode")}
         </span>
       </label>
     </button>

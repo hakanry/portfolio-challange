@@ -1,32 +1,35 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LanguageContext = createContext();
 
-const translations = ["en", "tr"];
-
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useLocalStorage("language", "en");
+  const [translations, setTranslations] = useState({});
 
   useEffect(() => {
-    const stored = localStorage.getItem("language");
-    if (stored && translations[stored]) setLanguage(stored);
-  }, []);
+    const loadLanguage = async () => {
+      try {
+        const response = await axios.get(`/locales/${language}.json`);
+        setTranslations(response.data);
+      } catch (error) {
+        console.error("Çeviri dosyası yüklenemedi:", error);
+      }
+    };
 
-  const changeLanguage = (lang) => {
-    if (translations[lang]) {
-      setLanguage(lang);
-      localStorage.setItem("language", lang);
-    }
+    loadLanguage();
+  }, [language]);
+
+  const toggleLanguage = () => {
+    const newLang = language === "en" ? "tr" : "en";
+    setLanguage(newLang);
   };
 
+  const t = (key) => translations[key] || key;
+
   return (
-    <LanguageContext.Provider
-      value={{
-        language,
-        changeLanguage,
-        t: (key) => translations[language][key] || key,
-      }}
-    >
+    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
