@@ -2,16 +2,16 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 function ProjectCard(p) {
-  const { project } = p;
   const { t } = useLanguage();
+  const { project } = p;
   return (
-    <div className="flex flex-col gap-6 py-4">
+    <div className="flex flex-col gap-6 py-4 max-md:max-w-[100%]  max-h-[30%]">
       <img src={project.imgSRC} />
       <h1 className="text-indigo-700 text-3xl dark:text-indigo-400">
-        {project.title}
+        {t(project.title)}
       </h1>
-      <p className="text-gray-500 text-sm">{t("project_description")}</p>
-      <div className="flex gap-1.5">
+      <p className="text-gray-500 text-sm ">{t(project.paragraph)}</p>
+      <div className="flex gap-1.5 max-lg:flex-wrap">
         {project.icerir.map((x, index) => {
           return (
             <p

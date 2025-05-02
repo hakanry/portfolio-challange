@@ -18,7 +18,7 @@ export default function Hero() {
             <p className="font-sans font-bold text-7xl text-gray-800 max-sm:text-4xl dark:text-slate-300 ">
               {t("tagline")}
             </p>
-            <h1 className="font-sans font-normal text-lg text-gray-500  max-sm:max-w-[100%] dark:text-white">
+            <h1 className="font-sans font-normal text-lg text-gray-500  max-sm:max-w-[100%] dark:text-white lg:w-[75%]">
               {t("intro")}
             </h1>
           </div>
@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
         </div>
         <img
-          className="w-[30%] aspect-2/1.5 rounded-full md:max-w-full md:p-12 sm:max-w-full sm:p-12 max-sm:max-w-full max-sm:py-6"
+          className="w-[30%] aspect-2/1.5 rounded-full max-sm:py-12 max-md:py-12 max-lg:py-12 max-xl:py-12 max-sm:self-center max-md:self-center max-lg:self-center max-xl:self-center"
           src={img_1}
         />
       </div>

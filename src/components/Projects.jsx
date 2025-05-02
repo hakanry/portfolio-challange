@@ -12,7 +12,7 @@ function Projects() {
       <h1 className="font-sans font-bold text-5xl text-gray-800 py-4 dark:text-slate-300">
         {t("projects")}
       </h1>
-      <div className="flex flex-col gap-32 py-4  xl:flex-row">
+      <div className="flex gap-32 py-4 max-xl:flex-wrap ">
         {projectData.map((p, index) => {
           return <ProjectCard key={index} project={p} />;
         })}
